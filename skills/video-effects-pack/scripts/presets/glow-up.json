@@ -1,0 +1,13 @@
+{
+  "description": "sparkles over the whole clip and a glowing frame appearing at 0.4 s",
+  "effects": [
+    {
+      "effect": "sparkle",
+      "start": 0.0
+    },
+    {
+      "effect": "colorframe",
+      "start": 0.4
+    }
+  ]
+}

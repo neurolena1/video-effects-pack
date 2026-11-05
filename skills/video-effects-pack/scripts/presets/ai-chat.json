@@ -1,0 +1,13 @@
+{
+  "description": "the clip lands in an AI-chat card, then a checklist pops in (texts via --text/--items)",
+  "effects": [
+    {
+      "effect": "chat",
+      "start": 0.3
+    },
+    {
+      "effect": "checklistpop",
+      "start": 2.8
+    }
+  ]
+}

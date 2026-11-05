@@ -1,0 +1,13 @@
+{
+  "description": "black-and-white flash, then the clip turns into a magazine cover (texts via --text/--items/--opt)",
+  "effects": [
+    {
+      "effect": "bwframe",
+      "start": 0.0
+    },
+    {
+      "effect": "magazine",
+      "start": 2.2
+    }
+  ]
+}

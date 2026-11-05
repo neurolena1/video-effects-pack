@@ -1,0 +1,17 @@
+{
+  "description": "continuous energy: colour swing + beat pulse + sparkles over the whole clip",
+  "effects": [
+    {
+      "effect": "colorswing",
+      "start": 0.0
+    },
+    {
+      "effect": "pulse",
+      "start": 0.0
+    },
+    {
+      "effect": "sparkle",
+      "start": 0.0
+    }
+  ]
+}

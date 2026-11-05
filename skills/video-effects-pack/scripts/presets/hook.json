@@ -1,0 +1,14 @@
+{
+  "description": "impact opening: a hard push-in with a short glitch burst",
+  "effects": [
+    {
+      "effect": "quickzoom",
+      "start": 0.0
+    },
+    {
+      "effect": "vglitch",
+      "start": 0.0,
+      "end": 0.7
+    }
+  ]
+}

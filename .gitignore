@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+dist/
+*.mp4
+*.mov
+*.tmp
+.DS_Store
+Thumbs.db

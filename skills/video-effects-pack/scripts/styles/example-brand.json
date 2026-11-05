@@ -1,0 +1,10 @@
+{
+  "_comment": "EXAMPLE of a custom colour style. Copy this file, rename it (e.g. my-brand.json), put your own HEX (RGB) colours in and run with --style my-brand (or a full path). Only the fields you want to change are needed; the rest is derived automatically. / ПРИМЕР собственного цветового стиля: скопируйте файл, переименуйте, подставьте свои HEX-цвета и запускайте с --style my-brand.",
+  "paper": "#EAF1F7",
+  "card": "#FFFFFF",
+  "ink": "#14213D",
+  "accent1": "#FCA311",
+  "accent2": "#2A9D8F",
+  "accent3": "#E76F51",
+  "corners": 0.5
+}
