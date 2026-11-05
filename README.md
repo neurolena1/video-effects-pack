@@ -160,19 +160,75 @@ python skills/video-effects-pack/scripts/fx.py in.mp4 preview.mp4 -e 38 --previe
 
 | Option | Meaning |
 |---|---|
-| `-e, --effect` | number, id, Russian name, or `all` |
+| `-e, --effect` | number, id, English alias (`glitch`, `frame`, `zoom`, `cover` ...), Russian name, or `all` |
 | `--start`, `--end` | when the effect begins; when a continuous effect stops |
 | `--duration` | length of an intro effect (range shown by `--list`) |
 | `--preview N` | render only the first N seconds |
 | `--repeat P` | demo: an intro effect repeats with a pause of P seconds |
 | `--text`, `--items`, `--opt key=value` | texts of the scene effects (see `skills/video-effects-pack/SKILL.md`) |
 | `--style` | colours of the scene effects: `minimal` (default), a file in `scripts/styles/`, or your own `.json` |
-| `--lang en\|ru` | language of the default texts of some scene effects |
+| `--lang en\|ru` | language of the default on-screen texts of `magazine`, `growthchart`, `checklist2` and `headlinestorm2` (default: English). The other scene effects have English defaults only; for any other language pass your own texts with `--text`, `--items` or `--opt` |
 | `--face x,y,w,h` | mosaic only: face box as fractions of the frame |
 | `--plan FILE.json`, `--preset NAME` | several effects in one render (see below); `--list-presets` shows the presets |
 | `--seed`, `--crf` | random pattern; x264 quality (lower is better, default 17) |
 
 Intro effects play once with a fixed length; continuous effects run from `--start` to `--end`. The full table of effects, lengths and allowed `--duration` ranges is in [`skills/video-effects-pack/references/effects.md`](skills/video-effects-pack/references/effects.md).
+
+## All 47 effects
+
+Every effect has a number, an id (its English name for the command line) and a Russian name; any of them works with `-e`. When you ask an assistant in chat, you can name an effect in any language or just describe the look. The "English name" column is a readable title. To see the effects in action, use the overview above or run `fx.py --list`.
+
+| # | English name | id | Russian name | Type |
+|---|---|---|---|---|
+| 1 | Sparkle | `sparkle` | блеск | continuous |
+| 2 | Vertical glitch | `vglitch` | вертикальный сбой | continuous |
+| 3 | Drop-in | `dropin` | выпадение | intro, 0.80 s |
+| 4 | Details (photo cards) | `details` | детали | intro, 3.00 s |
+| 5 | Clasp (zipper) | `clasp` | застежка | intro, 2.50 s |
+| 6 | Pulse shake | `pulse` | импульсная тряска | continuous |
+| 7 | Face mosaic | `mosaic` | мозаика | continuous |
+| 8 | Soft sway | `soft` | мягкий | continuous |
+| 9 | Slice and merge | `slicemerge` | нарезка и слияние | continuous |
+| 10 | Film strip | `strip` | полоса | intro, 3.70 s |
+| 11 | Cursed vision | `cursed` | проклятое видение | continuous |
+| 12 | Multi-screen split | `split` | разделение на несколько кадров | intro, 3.10 s |
+| 13 | Heartbeat shake | `heartbeat` | сердцебиение встряска | continuous |
+| 14 | Mix (diagonal) | `mix` | смесь | intro, 4.20 s |
+| 15 | Slice-up flicker | `sliceup` | срез вверх фликер | intro, 3.10 s |
+| 16 | Color swing | `colorswing` | цвето качели | continuous |
+| 17 | Chalk formulas | `formulas` | формулы | continuous |
+| 18 | Rainbow glow | `rainbow` | радужное свечение | continuous |
+| 19 | Grid dive | `griddive` | стена из кадров | intro, 0.85 s |
+| 20 | Screen in screen | `screeninscreen` | экран в экране | intro, 1.50 s |
+| 21 | Orbit | `orbit` | орбита | intro, 1.55 s |
+| 22 | Chat takeover | `chat` | чат-захват | intro, 2.03 s |
+| 23 | Snap zoom | `snapzoom` | щелчок-зум | intro, 2.45 s |
+| 24 | Checklist pop | `checklistpop` | всплывающий чек-лист | intro, 1.84 s |
+| 25 | Headline storm | `headlinestorm` | шторм заголовков | intro, 2.05 s |
+| 26 | Paper cutout | `papercutout` | бумажная вырезка | intro, 1.87 s |
+| 27 | Liquid glass | `liquidglass` | жидкое стекло | intro, 1.55 s |
+| 28 | Green screen | `greenscreen` | хромакей | intro, 2.05 s |
+| 29 | Digital zoom | `digitalzoom` | цифровой зум | intro, 2.05 s |
+| 30 | Phone mockup | `phonemock` | телефон | intro, 1.16 s |
+| 31 | Quick zoom | `quickzoom` | резкое приближение | intro, 1.90 s |
+| 32 | Smooth zoom-out | `smoothzoomout` | плавное отдаление | intro, 1.45 s |
+| 33 | Color frame | `colorframe` | цветная рамка | intro, 1.90 s |
+| 34 | Break the frame | `framebreak` | разбить рамку | intro, 1.75 s |
+| 35 | Growth chart | `growthchart` | рисуем график | intro, 2.30 s |
+| 36 | Video in video (delay) | `pipdelay` | видео поверх видео | intro, 2.10 s |
+| 37 | Split screen | `splitscreen` | сплит-экран | intro, 1.90 s |
+| 38 | Magazine cover | `magazine` | я на обложке | intro, 2.15 s |
+| 39 | Black-and-white frame | `bwframe` | чёрно-белый кадр | intro, 1.90 s |
+| 40 | Pixelate | `pixelate` | пикселизация | intro, 1.80 s |
+| 41 | Vignette | `vignette` | виньетка | intro, 1.55 s |
+| 42 | Fade to black | `fadeblack` | плавное затемнение | intro, 1.75 s |
+| 43 | Icons around me | `iconsaround` | иконки вокруг меня | intro, 2.00 s |
+| 44 | Green background | `greenbg` | зелёный фон | intro, 2.10 s |
+| 45 | Checklist card | `checklist2` | список с галочками | intro, 2.00 s |
+| 46 | Headline storm 2 | `headlinestorm2` | шторм из заголовков | intro, 2.10 s |
+| 47 | Phone mockup 2 | `phonemock2` | макет телефона | intro, 2.00 s |
+
+Intro effects play once from `--start`; continuous effects run from `--start` to `--end`. What each effect does in detail: [`effects.md`](skills/video-effects-pack/references/effects.md).
 
 ## Several effects in one render, and presets
 

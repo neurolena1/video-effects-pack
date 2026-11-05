@@ -160,19 +160,75 @@ python skills/video-effects-pack/scripts/fx.py in.mp4 preview.mp4 -e 38 --previe
 
 | Опция | Что делает |
 |---|---|
-| `-e, --effect` | номер, id, русское название или `all` |
+| `-e, --effect` | номер, id, английский псевдоним (`glitch`, `frame`, `zoom`, `cover` и др.), русское название или `all` |
 | `--start`, `--end` | когда эффект начинается; когда заканчивается непрерывный эффект |
 | `--duration` | длина интро-эффекта (диапазон показывает `--list`) |
 | `--preview N` | отрендерить только первые N секунд |
 | `--repeat P` | демо: интро-эффект повторяется с паузой P секунд |
 | `--text`, `--items`, `--opt ключ=значение` | тексты сценных эффектов (см. `skills/video-effects-pack/SKILL.md`) |
 | `--style` | цвета сценных эффектов: `minimal` (по умолчанию), файл из `scripts/styles/` или ваш `.json` |
-| `--lang en\|ru` | язык стандартных текстов некоторых сценных эффектов |
+| `--lang en\|ru` | язык стандартных надписей у `magazine`, `growthchart`, `checklist2` и `headlinestorm2` (по умолчанию английский). У остальных сценных эффектов надписи только английские; для другого языка задайте свои тексты через `--text`, `--items` или `--opt` |
 | `--face x,y,w,h` | только для мозаики: рамка лица в долях кадра |
 | `--plan FILE.json`, `--preset NAME` | несколько эффектов за один рендер (см. ниже); `--list-presets` показывает образы |
 | `--seed`, `--crf` | другой случайный узор; качество x264 (меньше — лучше, по умолчанию 17) |
 
 Интро-эффекты проигрываются один раз с фиксированной длиной; непрерывные идут от `--start` до `--end`. Полная таблица эффектов, их длин и допустимых диапазонов `--duration` лежит в [`skills/video-effects-pack/references/effects.md`](skills/video-effects-pack/references/effects.md) (на английском; русские названия эффектов указаны в колонке «Russian name»).
+
+## Все 47 эффектов
+
+У каждого эффекта есть номер, id (английское название для командной строки) и русское название, любое из них подходит для `-e`. В чате с ассистентом эффект можно назвать на любом языке или просто описать, как должно выглядеть. Колонка «English name» это читаемое английское название. Как выглядят эффекты, видно на обзоре выше, а `fx.py --list` покажет список в терминале.
+
+| № | English name | id | Русское название | Тип |
+|---|---|---|---|---|
+| 1 | Sparkle | `sparkle` | блеск | непрерывный |
+| 2 | Vertical glitch | `vglitch` | вертикальный сбой | непрерывный |
+| 3 | Drop-in | `dropin` | выпадение | разовый, 0,80 с |
+| 4 | Details (photo cards) | `details` | детали | разовый, 3,00 с |
+| 5 | Clasp (zipper) | `clasp` | застежка | разовый, 2,50 с |
+| 6 | Pulse shake | `pulse` | импульсная тряска | непрерывный |
+| 7 | Face mosaic | `mosaic` | мозаика | непрерывный |
+| 8 | Soft sway | `soft` | мягкий | непрерывный |
+| 9 | Slice and merge | `slicemerge` | нарезка и слияние | непрерывный |
+| 10 | Film strip | `strip` | полоса | разовый, 3,70 с |
+| 11 | Cursed vision | `cursed` | проклятое видение | непрерывный |
+| 12 | Multi-screen split | `split` | разделение на несколько кадров | разовый, 3,10 с |
+| 13 | Heartbeat shake | `heartbeat` | сердцебиение встряска | непрерывный |
+| 14 | Mix (diagonal) | `mix` | смесь | разовый, 4,20 с |
+| 15 | Slice-up flicker | `sliceup` | срез вверх фликер | разовый, 3,10 с |
+| 16 | Color swing | `colorswing` | цвето качели | непрерывный |
+| 17 | Chalk formulas | `formulas` | формулы | непрерывный |
+| 18 | Rainbow glow | `rainbow` | радужное свечение | непрерывный |
+| 19 | Grid dive | `griddive` | стена из кадров | разовый, 0,85 с |
+| 20 | Screen in screen | `screeninscreen` | экран в экране | разовый, 1,50 с |
+| 21 | Orbit | `orbit` | орбита | разовый, 1,55 с |
+| 22 | Chat takeover | `chat` | чат-захват | разовый, 2,03 с |
+| 23 | Snap zoom | `snapzoom` | щелчок-зум | разовый, 2,45 с |
+| 24 | Checklist pop | `checklistpop` | всплывающий чек-лист | разовый, 1,84 с |
+| 25 | Headline storm | `headlinestorm` | шторм заголовков | разовый, 2,05 с |
+| 26 | Paper cutout | `papercutout` | бумажная вырезка | разовый, 1,87 с |
+| 27 | Liquid glass | `liquidglass` | жидкое стекло | разовый, 1,55 с |
+| 28 | Green screen | `greenscreen` | хромакей | разовый, 2,05 с |
+| 29 | Digital zoom | `digitalzoom` | цифровой зум | разовый, 2,05 с |
+| 30 | Phone mockup | `phonemock` | телефон | разовый, 1,16 с |
+| 31 | Quick zoom | `quickzoom` | резкое приближение | разовый, 1,90 с |
+| 32 | Smooth zoom-out | `smoothzoomout` | плавное отдаление | разовый, 1,45 с |
+| 33 | Color frame | `colorframe` | цветная рамка | разовый, 1,90 с |
+| 34 | Break the frame | `framebreak` | разбить рамку | разовый, 1,75 с |
+| 35 | Growth chart | `growthchart` | рисуем график | разовый, 2,30 с |
+| 36 | Video in video (delay) | `pipdelay` | видео поверх видео | разовый, 2,10 с |
+| 37 | Split screen | `splitscreen` | сплит-экран | разовый, 1,90 с |
+| 38 | Magazine cover | `magazine` | я на обложке | разовый, 2,15 с |
+| 39 | Black-and-white frame | `bwframe` | чёрно-белый кадр | разовый, 1,90 с |
+| 40 | Pixelate | `pixelate` | пикселизация | разовый, 1,80 с |
+| 41 | Vignette | `vignette` | виньетка | разовый, 1,55 с |
+| 42 | Fade to black | `fadeblack` | плавное затемнение | разовый, 1,75 с |
+| 43 | Icons around me | `iconsaround` | иконки вокруг меня | разовый, 2,00 с |
+| 44 | Green background | `greenbg` | зелёный фон | разовый, 2,10 с |
+| 45 | Checklist card | `checklist2` | список с галочками | разовый, 2,00 с |
+| 46 | Headline storm 2 | `headlinestorm2` | шторм из заголовков | разовый, 2,10 с |
+| 47 | Phone mockup 2 | `phonemock2` | макет телефона | разовый, 2,00 с |
+
+Разовые эффекты проигрываются один раз с `--start`, непрерывные идут от `--start` до `--end`. Подробное описание каждого эффекта: [`effects.md`](skills/video-effects-pack/references/effects.md) (на английском).
 
 ## Несколько эффектов за один рендер и образы
 
