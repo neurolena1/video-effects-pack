@@ -289,4 +289,5 @@ This is an independent project. It imitates the look of common video-editor effe
 Code, documentation and effect designs: [MIT](LICENSE), © 2026 NeuroLena.
 
 Author: NeuroLena. Telegram channel (in Russian): [t.me/neurolena1](https://t.me/neurolena1).
+A non-technical walkthrough with a video of every effect (in Russian): [hub.neurolena.one](https://hub.neurolena.one/blog/video-effects-for-shorts/).
 Bundled third-party components (Inter font, U²-Net-P and YuNet models, OpenCV Haar cascade) keep their own licences: see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

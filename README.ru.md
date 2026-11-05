@@ -289,4 +289,5 @@ python skills/video-effects-pack/scripts/fx.py in.mp4 out.mp4 --preset cover-sto
 Код, документация и дизайн эффектов: [MIT](LICENSE), © 2026 NeuroLena.
 
 Автор: NeuroLena. Telegram-канал: [t.me/neurolena1](https://t.me/neurolena1).
+Подробная статья для тех, кто не программирует, с видео каждого эффекта: [hub.neurolena.one](https://hub.neurolena.one/blog/video-effects-for-shorts/).
 Встроенные сторонние компоненты (шрифт Inter, модели U²-Net-P и YuNet, каскад Хаара из OpenCV) сохраняют собственные лицензии: см. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
