@@ -15,9 +15,9 @@ Everything is rendered locally with Python and ffmpeg. No cloud service, no API 
 
 *Frames of all 47 effects, numbered as in `--list` (a sample clip with an AI-generated person).*
 
-[![All 47 effects in a 20-second video](docs/effects-grid-poster.jpg)](docs/effects-grid-47.mp4)
+![All 47 effects, a 20-second animation](docs/effects-grid-47.webp)
 
-*Click the picture to open a 20-second video with all 47 effects (4 slides, 12 effects each, English and Russian names).*
+*A 20-second animation of all 47 effects (4 slides, 12 effects each, English and Russian names). The full-quality MP4 is [`docs/effects-grid-47.mp4`](docs/effects-grid-47.mp4): open the file page and use Download.*
 
 ## Works with
 
