@@ -6,3 +6,6 @@ dist/
 *.tmp
 .DS_Store
 Thumbs.db
+
+# demo video shown in the README
+!docs/effects-grid-47.mp4

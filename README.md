@@ -15,6 +15,10 @@ Everything is rendered locally with Python and ffmpeg. No cloud service, no API 
 
 *Frames of all 47 effects, numbered as in `--list` (a sample clip with an AI-generated person).*
 
+[![All 47 effects in a 20-second video](docs/effects-grid-poster.jpg)](docs/effects-grid-47.mp4)
+
+*Click the picture to open a 20-second video with all 47 effects (4 slides, 12 effects each, English and Russian names).*
+
 ## Works with
 
 | Platform | How the skill is installed |
